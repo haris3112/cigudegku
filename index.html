@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kelurahan cigudeg</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/12/27/2365517242.jpg" alt="Logo Kelurahan dengan lambang pohon dan rumah tradisional, warna hijau dan kuning" />
+            <h1>Kelurahan Cigudeg</h1>
+            <p>Selamat datang di portal informasi seputar Kelurahan cigudeg di kota bogor</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#wisata">Wisata</a></li>
+            <li><a href="#usaha">Usaha</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="beranda">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Selamat Datang di Kelurahan Cigudeg</h2>
+                    <p>salah satu kelurahan di kota bogor provinsi jawa barat</p>
+                </div>
+            </div>
+        </section>
+        <p>Cigudeg merupakan desa sekaligus ibu kota kecamatan Cigudeg, yang merupakan kecamatan terluas kedua di Kabupaten Bogor setelah Sukamakmur, dengan total luas mencapai 161,20 km².<br>Desa Cigudeg berada di dalam kecamatan yang mengelola 15 desa/kelurahan, semuanya berbagi kode pos 16660.<br>Rata-rata elevasi wilayah adalah sekitar 363 mdpl, dengan koordinat ±6°33′ LS 106°32′ BT.</p>
+        <p>Kelurahan/desa Cigudeg berdiri sebagai pusat administratif Kecamatan Cigudeg, Bogor, dengan area luas ±161 km², jumlah penduduk >16 ribu jiwa, berada di elevasi 363 mdpl, sebagai bagian dari 15 desa di kecamatan tersebut. Proses pemekaran baik di tingkat desa maupun kecamatan tengah berjalan seiring rencana pembentukan Kabupaten Bogor Barat.</p>
+
+        <section id="wisata">
+            <h2 class="section-title">Destinasi Wisata</h2>
+            <div class="cards" id="wisata-cards">
+                <!-- Data wisata akan dimuat di sini -->
+            </div>
+            <div class="text-center">
+                <button class="btn" onclick="openWisataModal()">Tambah Wisata</button>
+            </div>
+        </section>
+
+        <section id="usaha">
+            <h2 class="section-title">Usaha Warga</h2>
+            <div class="cards" id="usaha-cards">
+                <!-- Data usaha akan dimuat di sini -->
+            </div>
+            <div class="text-center">
+                <button class="btn" onclick="openUsahaModal()">Tambah Usaha</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Tambah/Edit Wisata -->
+    <div class="modal" id="wisata-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="wisata-modal-title">Tambah Wisata Baru</h3>
+                <span class="close" onclick="closeModal('wisata-modal')">&times;</span>
+            </div>
+            <form id="wisata-form">
+                <input type="hidden" id="wisata-id">
+                <div class="form-group">
+                    <label for="wisata-nama">Nama Wisata</label>
+                    <input type="text" id="wisata-nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="wisata-lokasi">Lokasi</label>
+                    <input type="text" id="wisata-lokasi" required>
+                </div>
+                <div class="form-group">
+                    <label for="wisata-deskripsi">Deskripsi</label>
+                    <textarea id="wisata-deskripsi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="wisata-jenis">Jenis Wisata</label>
+                    <select id="wisata-jenis" required>
+                        <option value="">Pilih Jenis</option>
+                        <option value="Alam">Alam</option>
+                        <option value="Kuliner">Kuliner</option>
+                        <option value="Budaya">Budaya</option>
+                        <option value="Sejarah">Sejarah</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="wisata-gambar">URL Gambar (gunakan https://placehold.co)</label>
+                    <input type="text" id="wisata-gambar" value="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/becb320c-c56e-45a6-9cc2-0867a24234fc.png" required>
+                </div>
+                <div class="form-group text-right">
+                    <button type="button" class="btn btn-danger" onclick="closeModal('wisata-modal')">Batal</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Tambah/Edit Usaha -->
+    <div class="modal" id="usaha-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="usaha-modal-title">Tambah Usaha Baru</h3>
+                <span class="close" onclick="closeModal('usaha-modal')">&times;</span>
+            </div>
+            <form id="usaha-form">
+                <input type="hidden" id="usaha-id">
+                <div class="form-group">
+                    <label for="usaha-nama">Nama Usaha</label>
+                    <input type="text" id="usaha-nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="usaha-pemilik">Pemilik</label>
+                    <input type="text" id="usaha-pemilik" required>
+                </div>
+                <div class="form-group">
+                    <label for="usaha-lokasi">Lokasi</label>
+                    <input type="text" id="usaha-lokasi" required>
+                </div>
+                <div class="form-group">
+                    <label for="usaha-deskripsi">Deskripsi</label>
+                    <textarea id="usaha-deskripsi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="usaha-jenis">Jenis Usaha</label>
+                    <select id="usaha-jenis" required>
+                        <option value="">Pilih Jenis</option>
+                        <option value="Kuliner">Kuliner</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Jasa">Jasa</option>
+                        <option value="Kerajinan">Kerajinan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="usaha-kontak">Kontak</label>
+                    <input type="text" id="usaha-kontak" required>
+                </div>
+                <div class="form-group">
+                    <label for="usaha-gambar">URL Gambar (gunakan https://placehold.co)</label>
+                    <input type="text" id="usaha-gambar" value="https://placehold.co/600x400" required>
+                </div>
+                <div class="form-group text-right">
+                    <button type="button" class="btn btn-danger" onclick="closeModal('usaha-modal')">Batal</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column" id="tentang">
+                <h3>Tentang Kami</h3>
+                <p>
+                    website ini di buat oleh kelompok haris dan kawan kawan sebagai tugas akhir semester 4
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>Link Cepat</h3>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#wisata">Wisata</a></li>
+                    <li><a href="#usaha">Usaha</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>di buat oleh</h3>
+                <ul>
+                    <li>Haris abdul basit (231106040909)</li>
+                    <li>Muhammad Rafael Fadilah(231106040971)</li>
+                    <li>Rangga Pratama Saputra(231106040953)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Kelurahan Cigudeg. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
