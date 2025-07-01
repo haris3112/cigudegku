@@ -80,47 +80,47 @@ window.onload = () => {
     loadUsaha();
 }
         // Data awal (dummy data)
-        let wisata = [
+       let wisata = [
             {
                 id: 1,
-                nama: "Taman Kota Sejahtera",
-                lokasi: "Jl. Merdeka No. 10",
-                deskripsi: "Taman kota yang rindang dengan fasilitas bermain anak dan jogging track.",
+                nama: "Kebun Teh Cirangsad",
+                lokasi: "Kebun Teh Cirangsad: Banyu Wangi, Kec. Cigudeg, Kabupaten Bogor, Jawa Barat 16660",
+                deskripsi: "Destinasi wisata populer di Cigudeg yang menawarkan pemandangan kebun teh hijau luas dengan udara sejuk. Cocok untuk bersantai dan menikmati pemandangan alam. .",
                 jenis: "Alam",
-                gambar: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/973b47d6-aaa1-4372-a602-590b1f382115.png"
+                gambar: "https://plus.unsplash.com/premium_photo-1692049122910-d8b131ed54c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2VidW4lMjB0ZWh8ZW58MHx8MHx8fDA%3D"
             },
             {
                 id: 2,
-                nama: "Warung Makan Nikmat",
-                lokasi: "Jl. Sejahtera No. 45",
-                deskripsi: "Warung makan dengan menu tradisional yang lezat dengan harga terjangkau.",
-                jenis: "Kuliner",
-                gambar: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eca49e9a-88bc-42ae-affc-5f13f82731b1.png"
+                nama: "Curug Rahong",
+                lokasi: "Curug Rahong: Kampung Kedaung, Desa Rengasjajar, Kecamatan Cigudeg, Kabupaten Bogor, Jawa Barat",
+                deskripsi: "Air terjun tersembunyi yang terletak di Kampung Kedaung, Desa Rengasjajar. .",
+                jenis: "Alam",
+                gambar: "https://images.unsplash.com/photo-1661238897562-a7adf13755a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3VydWd8ZW58MHx8MHx8fDA%3D"
             }
         ];
         
         let usaha = [
             {
                 id: 1,
-                nama: "Toko Kelontong Sejahtera",
-                pemilik: "Budi Santoso",
-                lokasi: "Jl. Sejahtera No. 23",
-                deskripsi: "Toko kelontong lengkap dengan berbagai kebutuhan sehari-hari.",
+                nama: "PT Wita Argo Mas",
+                pemilik: "Adjie Chas",
+                lokasi: "JDesa Banyu Wangi, Kecamatan Cigudeg, Kabupaten Bogor",
+                deskripsi: " Pengembangan kavling kebun agrowisata dan budidaya vanili di Desa Banyu Wangi, Cigudeg.",
                 jenis: "Retail",
                 kontak: "08123456789",
-                gambar: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c3b2bd6a-307a-433b-89f4-508e2940aca5.png"
+                gambar: "https://images.unsplash.com/photo-1655356260504-f39b05df2221?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGtlYnVufGVufDB8fDB8fHww"
             },
             {
                 id: 2,
-                nama: "Kerajinan Tangan Kreatif",
+                nama: "Kerajinan emas",
                 pemilik: "Siti Aminah",
-                lokasi: "Jl. Karya No. 12",
-                deskripsi: "Menyediakan berbagai kerajinan tangan unik dan berkualitas.",
+                lokasi: "Komp. Kehutanan No.162, Jl. Bojong Baru, Bogor Barat",
+                deskripsi: "Menyediakan berbagai kerajinan emas unik dan berkualitas.",
                 jenis: "Kerajinan",
                 kontak: "08234567890",
-                gambar: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9fc35ba-ae54-49de-a653-b643118f40c7.png"
-            }
-        ];
+                gambar: "https://images.unsplash.com/photo-1717409014701-8e630ff057f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVyaGlhc2FuJTIwZW1hc3xlbnwwfHwwfHx8MA%3D%3D"
+            }
+        ];
         
         // Fungsi untuk memuat data wisata
         function loadWisata() {
